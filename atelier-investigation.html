@@ -26,9 +26,10 @@
 		<div class="reveal">
 			<div class="slides">
 					<section>
-						<h1>Advanced online search</h1>
+						<h1>Advanced Online Search</h1>
 					</section>
 
+                                    <section>
 					<section>
 						<h1>Google Dorking</h1>
 					</section>
@@ -69,7 +70,7 @@
 
 					<section>
 						<h2>Find copied pasted text</h2>
-						<code>intext:"ma phrase pompée ailleurs" -site:monsite.com
+						<code>intext:"My sentence copied somewhere" -site:monsite.com
 						</code>
 					</section>
 
@@ -83,22 +84,48 @@
 						<code>site:twitter.com &amp; intext:dvdrip
 						</code>
 					</section>
-
+                                    </section>
+                                    <section>
 					<section data-background="i/use-the-force.jpg">
-					<h2>Use the cache Luke</h2>
+					<h2>Use the Cache Luke</h2>
 					</section>
 
 					<section data-background="i/use-the-force.jpg">
 						<p><img src="i/encache.png" alt="Le cache de Google" title="" /></p>
 					</section>
+                                        <section data-markdown>
+                                            <textarea data-template>
+                                                ## Search Engines
+
+                                                Search in automated cache during crawling
+
+                                                * Google
+                                                * Bing
+                                                * Yandex
+                                            </textarea>
+                                        </section>
+
+                                        <section data-markdown>
+                                            <textarea data-template>
+                                                ## Cache Platorms
+
+                                                Search and backup your findings
+
+
+                                                * https://archive.org/web/
+                                                * https://archive.fo/
+
+                                                ![wayback](i/wayback.png)
+                                            </textarea>
+                                        </section>
+                                    </section>
 
 					<section>
 					<h1>Extra tools</h1>
 					<ul>
-						<li>Leaks portal : <a href="https://offshoreleaks.icij.org/">OffShore leaks</a>, <a href="https://offshoreleaks.icij.org/">West africa leaks</a>
+						<li>Leaks portal : <a href="https://offshoreleaks.icij.org/">OffShore leaks</a>, <a href="https://www.icij.org/investigations/west-africa-leaks/">West africa leaks</a>
 						</li>
-						<li>Linux users, <a href="https://www.gnu.org/software/grep/manual/grep.html">grep</a>
-						 is your friend</li>
+                                                <li>Corporations: <a href="https://opencorporates.com/">Open Corporates</a> or <a href="https://data.occrp.org/">OCCRP Data</a></li>
 						<li>If you're not afraid of pyton, use <a href="https://github.com/x0rz/tweets_analyzer">account profiling tools</a></li>
 						<li>Whois <strong>is</strong> also your friend</li>
 					</ul>
@@ -141,7 +168,9 @@
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+                                        { src: 'reveal.js/plugin/notes/notes.js', async: true },
+                                        { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
