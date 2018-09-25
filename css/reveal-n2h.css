@@ -197,25 +197,28 @@ body {
 
 .reveal pre {
   display: inline-block;
-	background: #666;
 	color: #fff;
 	font-size: .9em;
 	padding: .1em .2em;
   font-family: monospace;
   line-height: 1.2em;
   word-wrap: break-word;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
-
+}
 
 .reveal code {
-  font-family: monospace; }
-
-.reveal pre code {
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.2);
+	font-size: .7em;
+	border: 2px solid #999;
+	color: #eee;
+	margin: 2em 0;
+	padding: .5em 1em;
+	text-align: left;
   display: block;
-  padding: 5px;
-  overflow: auto;
+	overflow: auto;
   max-height: 400px;
-  word-wrap: normal; }
+  word-wrap: normal; 
+}
 
 .reveal table {
   margin: auto;
