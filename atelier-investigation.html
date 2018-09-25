@@ -8,7 +8,7 @@
 
 
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="css/n2h.css">
+		<link rel="stylesheet" href="css/reveal-n2h.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
@@ -25,12 +25,103 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown="atelier-investigation.md"  
-						 data-separator="^\n\n\n"  
-						 data-separator-vertical="^\n\n"  
-						 data-separator-notes="^Note:"  
-						 data-charset="UTF8">
-				</section>
+					<section>
+						<h1>Recherche avancée d'informations</h1>
+					</section>
+
+					<section>
+						<h1>Google Dorking</h1>
+					</section>
+
+					<section>
+						<h2>Opérateurs</h2>
+						<ul>
+							<li>"expression exacte"</li>
+							<li>OR &#8680; ce terme OU l'autre terme : <em>Google OR vie privée</em></li>
+							<li>- &#8680; mot à exclure de la recherche : <em>Google -privacy</em></li>
+							<li>* &#8680; caractère joker : <em>rock * roll</em></li>
+							<li>10..20 &#8680; échelle :  <em>Sarkozy 2002..2003</em></li>
+							<li>in  &#8680; conversion : <em>250 $ in €</em></li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Targets</h2>
+						<ul>
+						<li><pre>intitle:</pre> search something in the title of the page</li>
+						<li><pre>site:mysite.com</pre> search something only on mysite.com </li>
+						<li><pre>inurl:</pre> search something in the url of a page</li>
+						<li><pre>intext: search something inthe page body</pre></li>
+						<li><pre>filetype:pdf search a specific file type</pre></li>
+						<li><pre>link:http://site.com</pre> search every pages linking to site.com</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Combinations</h2>
+						<pre><code>"Macron" intitle:"top 5..10 facts" -site:youtube.com inurl:2015
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Juicy stuffs</h2>
+						<pre><code>intitle:”curriculum vitae” “Tel * * *” “adresse *” “e-mail”
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Find copied pasted text</h2>
+						<pre><code>intext:"ma phrase pompée ailleurs" -site:monsite.com
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Find other TLD</h2>
+						<pre><code>site:amazon.* -site:amazon.com
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Twitter search</h2>
+						<pre><code>site:twitter.com &amp; intext:dvdrip
+						</code></pre>
+					</section>
+
+					<section data-background="i/use-the-force.jpg">
+					<h2>Use the cache Luke</h2>
+					</section>
+
+					<section data-background="i/use-the-force.jpg">
+						<p><img src="i/encache.png" alt="Le cache de Google" title="" /></p>
+					</section>
+
+					<section>
+						<h1>Multifunction portal</h1>
+						<p><a href="https://inteltechniques.com/menu.html">Intel techniques search tools</a></p>
+						<aside class="notes">Note: Top searches : username et documents. Pour les profils linkedin ou autre : utilisez de faux profils</aside>
+					</section>
+
+					<section>
+					<h1>Extra tools</h1>
+					<ul>
+						<li>Leaks portal : <a href="https://offshoreleaks.icij.org/">OffShore leaks</a>, <a href="https://offshoreleaks.icij.org/">West africa leaks</a>
+						</li>
+						<li>Linux users, <a href="https://www.gnu.org/software/grep/manual/grep.html">grep</a>
+						 is your friend</li>
+						<li>If you're not afraid of pyton, use <a href="https://github.com/x0rz/tweets_analyzer">account profiling tools</a></li>
+						<li>Whois <strong>is</strong> also your friend</li>
+					</ul>
+					</section>
+
+					<section>
+						<h1>References</h1>
+						<ul>
+						<li>https://moz.com/learn/seo/search-operators</li>
+						<li>https://moz.com/blog/mastering-google-search-operators-in-67-steps</li>
+						<li>http://www.tekgyd.com/2015/07/how-to-use-google-dork-for-hacking.html</li>
+						<li>https://www.exploit-db.com/google-hacking-database/</li>
+						</ul>
+					</section>
 			</div>
 		</div>
 
@@ -47,11 +138,14 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				backgroundTransition: 'zoom' ,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'reveal.js/plugin/markdown/marked.js' },
-					{ src: 'reveal.js/plugin/markdown/markdown.js' },
 					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
 					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
