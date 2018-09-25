@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Sécurité numérique : investigation en ligne</title>
+		<title>Advanced online search</title>
 
 
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -26,7 +26,7 @@
 		<div class="reveal">
 			<div class="slides">
 					<section>
-						<h1>Recherche avancée d'informations</h1>
+						<h1>Advanced online search</h1>
 					</section>
 
 					<section>
@@ -34,14 +34,13 @@
 					</section>
 
 					<section>
-						<h2>Opérateurs</h2>
+						<h2>Operators</h2>
 						<ul>
-							<li>"expression exacte"</li>
-							<li>OR &#8680; ce terme OU l'autre terme : <em>Google OR vie privée</em></li>
-							<li>- &#8680; mot à exclure de la recherche : <em>Google -privacy</em></li>
-							<li>* &#8680; caractère joker : <em>rock * roll</em></li>
-							<li>10..20 &#8680; échelle :  <em>Sarkozy 2002..2003</em></li>
-							<li>in  &#8680; conversion : <em>250 $ in €</em></li>
+							<li><pre>"exact expression"<pre></li>
+							<li><pre>OR</pre> &#8680; this word <strong>OR</strong> the other word: <pre>Google OR privacy</pre></li>
+							<li><pre>-</pre> &#8680; exclude a word from the search: <pre>Google -privacy</pre></li>
+							<li><pre>*</pre> &#8680; joker caracter: <pre>rock * roll</pre></li>
+							<li><pre>10..20</pre> &#8680; scale: <pre>Sarkozy 2002..2003</pre></li>
 						</ul>
 					</section>
 
@@ -59,32 +58,30 @@
 
 					<section>
 						<h2>Combinations</h2>
-						<pre><code>"Macron" intitle:"top 5..10 facts" -site:youtube.com inurl:2015
-						</code></pre>
+						<code>"Macron" -site:youtube.com inurl:2015</code>
 					</section>
 
 					<section>
 						<h2>Juicy stuffs</h2>
-						<pre><code>intitle:”curriculum vitae” “Tel * * *” “adresse *” “e-mail”
-						</code></pre>
+						<code>intitle:”curriculum vitae” “Tel * * *” “adresse *” “e-mail”
+						</code>
 					</section>
 
 					<section>
 						<h2>Find copied pasted text</h2>
-						<pre><code>intext:"ma phrase pompée ailleurs" -site:monsite.com
-						</code></pre>
+						<code>intext:"ma phrase pompée ailleurs" -site:monsite.com
+						</code>
 					</section>
 
 					<section>
 						<h2>Find other TLD</h2>
-						<pre><code>site:amazon.* -site:amazon.com
-						</code></pre>
+						<code>site:amazon.* -site:amazon.com</code>
 					</section>
 
 					<section>
 						<h2>Twitter search</h2>
-						<pre><code>site:twitter.com &amp; intext:dvdrip
-						</code></pre>
+						<code>site:twitter.com &amp; intext:dvdrip
+						</code>
 					</section>
 
 					<section data-background="i/use-the-force.jpg">
@@ -93,12 +90,6 @@
 
 					<section data-background="i/use-the-force.jpg">
 						<p><img src="i/encache.png" alt="Le cache de Google" title="" /></p>
-					</section>
-
-					<section>
-						<h1>Multifunction portal</h1>
-						<p><a href="https://inteltechniques.com/menu.html">Intel techniques search tools</a></p>
-						<aside class="notes">Note: Top searches : username et documents. Pour les profils linkedin ou autre : utilisez de faux profils</aside>
 					</section>
 
 					<section>
@@ -116,10 +107,14 @@
 					<section>
 						<h1>References</h1>
 						<ul>
-						<li>https://moz.com/learn/seo/search-operators</li>
-						<li>https://moz.com/blog/mastering-google-search-operators-in-67-steps</li>
-						<li>http://www.tekgyd.com/2015/07/how-to-use-google-dork-for-hacking.html</li>
-						<li>https://www.exploit-db.com/google-hacking-database/</li>
+						<li><a href="https://moz.com/learn/seo/search-operators">Google Search Operators on moz.com</a>
+						</li>
+						<li><a href="https://moz.com/blog/mastering-google-search-operators-in-67-steps">Mastering Google Search Operators in 67 Easy Steps</a>
+						</li>
+						<li><a href="http://www.tekgyd.com/2015/07/how-to-use-google-dork-for-hacking.html">How To Use GOOGLE DORK for Hacking</a>
+						</li>
+						<li><a href="https://www.exploit-db.com/google-hacking-database/">Google Hacking Database</a>
+						</li>
 						</ul>
 					</section>
 			</div>
@@ -127,7 +122,7 @@
 
 		<footer id="mainfooter">
 			<a href="http://nothing2hide.org"><img src="i/logo-n2h.png" alt="Nothing2Hide" title="Nothing2Hide" height="40" /></a>
-			<p>Sécurité numérique | Recherche avancée d'informations | CC BY 3.0</p>
+			<p>Advanced online search | CC BY 3.0</p>
 		</footer>
 
 
